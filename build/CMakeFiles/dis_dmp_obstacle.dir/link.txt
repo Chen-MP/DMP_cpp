@@ -1,0 +1,3 @@
+F:\MinGw_Cmake\cmake-3.17.0-rc3-win64-x64\bin\cmake.exe -E rm -f CMakeFiles\dis_dmp_obstacle.dir/objects.a
+F:\MinGw_Cmake\mingw64\bin\ar.exe cr CMakeFiles\dis_dmp_obstacle.dir/objects.a @CMakeFiles\dis_dmp_obstacle.dir\objects1.rsp
+F:\MinGw_Cmake\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\dis_dmp_obstacle.dir/objects.a -Wl,--no-whole-archive  -o dis_dmp_obstacle.exe -Wl,--out-implib,libdis_dmp_obstacle.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\dis_dmp_obstacle.dir\linklibs.rsp

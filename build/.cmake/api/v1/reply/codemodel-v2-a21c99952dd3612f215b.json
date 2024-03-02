@@ -1,0 +1,95 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CanonicalSystem",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CanonicalSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CanonicalSystem-Debug-087e5697aa1acb6d326f.json",
+					"name" : "CanonicalSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dis_dmp_obstacle::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dis_dmp_obstacle-Debug-a7d834aa1b133514ee8b.json",
+					"name" : "dis_dmp_obstacle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "discrete_dmp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-discrete_dmp-Debug-c9273a860155ee6c98d1.json",
+					"name" : "discrete_dmp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "discrete_psi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-discrete_psi-Debug-20f8689f8b6bb6913ff8.json",
+					"name" : "discrete_psi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "plotscatter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plotscatter-Debug-d80f74d8178bfa92ce32.json",
+					"name" : "plotscatter",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/desktop/learn_cpp/My_DMP/build",
+		"source" : "D:/desktop/learn_cpp/My_DMP"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

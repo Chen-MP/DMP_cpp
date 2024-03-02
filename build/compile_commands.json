@@ -1,0 +1,62 @@
+[
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_dmp.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_dmp.dir\\discrete_dmp.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\discrete_dmp.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/discrete_dmp.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_dmp.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_dmp.dir\\Canonical_System\\CanonicalSystem.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Canonical_System\\CanonicalSystem.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Canonical_System/CanonicalSystem.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_dmp.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_dmp.dir\\Original_discrete\\original_discrete.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Original_discrete\\original_discrete.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Original_discrete/original_discrete.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/CanonicalSystem.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\CanonicalSystem.dir\\cs.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\cs.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/cs.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/CanonicalSystem.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\CanonicalSystem.dir\\Canonical_System\\CanonicalSystem.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Canonical_System\\CanonicalSystem.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Canonical_System/CanonicalSystem.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_psi.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_psi.dir\\discrete_psi.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\discrete_psi.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/discrete_psi.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_psi.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_psi.dir\\Canonical_System\\CanonicalSystem.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Canonical_System\\CanonicalSystem.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Canonical_System/CanonicalSystem.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/discrete_psi.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\discrete_psi.dir\\Original_discrete\\original_discrete.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Original_discrete\\original_discrete.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Original_discrete/original_discrete.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/dis_dmp_obstacle.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\dis_dmp_obstacle.dir\\dis_DMP_obstacle.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\dis_DMP_obstacle.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/dis_DMP_obstacle.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/dis_dmp_obstacle.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\dis_dmp_obstacle.dir\\Canonical_System\\CanonicalSystem.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Canonical_System\\CanonicalSystem.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Canonical_System/CanonicalSystem.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/dis_dmp_obstacle.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\dis_dmp_obstacle.dir\\Original_discrete\\original_discrete.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\Original_discrete\\original_discrete.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/Original_discrete/original_discrete.cpp"
+},
+{
+  "directory": "D:/desktop/learn_cpp/My_DMP/build",
+  "command": "F:\\MinGw_Cmake\\mingw64\\bin\\g++.exe   @CMakeFiles/plotscatter.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++17 -o CMakeFiles\\plotscatter.dir\\test.cpp.obj -c D:\\desktop\\learn_cpp\\My_DMP\\test.cpp",
+  "file": "D:/desktop/learn_cpp/My_DMP/test.cpp"
+}
+]

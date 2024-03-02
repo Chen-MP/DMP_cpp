@@ -1,0 +1,3 @@
+F:\MinGw_Cmake\cmake-3.17.0-rc3-win64-x64\bin\cmake.exe -E rm -f CMakeFiles\CanonicalSystem.dir/objects.a
+F:\MinGw_Cmake\mingw64\bin\ar.exe cr CMakeFiles\CanonicalSystem.dir/objects.a @CMakeFiles\CanonicalSystem.dir\objects1.rsp
+F:\MinGw_Cmake\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\CanonicalSystem.dir/objects.a -Wl,--no-whole-archive  -o CanonicalSystem.exe -Wl,--out-implib,libCanonicalSystem.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CanonicalSystem.dir\linklibs.rsp

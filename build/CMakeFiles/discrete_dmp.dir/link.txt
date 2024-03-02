@@ -1,0 +1,3 @@
+F:\MinGw_Cmake\cmake-3.17.0-rc3-win64-x64\bin\cmake.exe -E rm -f CMakeFiles\discrete_dmp.dir/objects.a
+F:\MinGw_Cmake\mingw64\bin\ar.exe cr CMakeFiles\discrete_dmp.dir/objects.a @CMakeFiles\discrete_dmp.dir\objects1.rsp
+F:\MinGw_Cmake\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\discrete_dmp.dir/objects.a -Wl,--no-whole-archive  -o discrete_dmp.exe -Wl,--out-implib,libdiscrete_dmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\discrete_dmp.dir\linklibs.rsp
