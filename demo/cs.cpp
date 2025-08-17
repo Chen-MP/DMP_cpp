@@ -1,34 +1,23 @@
 #include <Python.h>
 #include <vector>
 #include <string>
-#include "Canonical_System/CanonicalSystem.hpp"
+#include "canonical_system/canonical_system.hpp"
 #include "matplotlibcpp.h"
-
 
 namespace plt = matplotlibcpp;
 
 int main()
 {
-    /*
-    使用 Py_SetPythonHome 设置绝对路径： 在程序中调用 Py_SetPythonHome 函数来设置 Python 的路径。
-    Py_SetPythonHome 函数接受的参数是 const wchar_t* 类型，因此你需要将路径字符串转换为 wchar_t* 类型。
-    你可以使用 std::wstring 来转换路径字符串，然后再传递给 Py_SetPythonHome 函数。
-    */
-    // std::wstring pythonHome = L"F:\\Python38";
-    // Py_SetPythonHome(L"/usr");
-    // Py_SetPythonHome(pythonHome.c_str());
-
-    int x0 = 1 ;
-    int alpha_x = 1 ;
-    float dt = 0.01f ;
+    double x0 = 1.0;
+    double alpha_x = 1.0;
+    double dt = 0.01 ;
     const char* pattern = "discrete" ;
     // const char* pattern = "A" ;
-    double tau = 1 ; 
+    double tau = 1.0; 
     
     int length_y_demo = 500 ;  
     std::vector<double> y_demo(length_y_demo, 0);
-    for ( int i = 0; i < length_y_demo; ++i)
-    {
+    for ( int i = 0; i < length_y_demo; ++i) {
         y_demo[i] = sin(i * dt) ; 
     } 
     /*
@@ -46,25 +35,24 @@ int main()
     */
 
     // std::cout << "y_demo.size()" <<y_demo.size() << std::endl ;
-    // CanonicalSystem cs(x0, alpha_x, dt, pattern, tau, y_demo);
+
     // {} 表示 y_demo 输入的时空数组
     CanonicalSystem cs(x0, alpha_x, dt, pattern, tau, {});
-    if (!cs.select_pattern())
-    {
+    if (!cs.selectPattern()) {
         return 0 ;
     }
-    int time_steps = cs.get_time_steps();
+    int time_steps = cs.getTimeSteps();
 
     std::vector<double> x(time_steps), y(time_steps) ; 
-    y = cs.generate_CS_track();
-    for (int num_steps = 0; num_steps < time_steps; ++ num_steps)
-    {
+    y = cs.generateCanonicalSystemTrack();
+
+    for (int num_steps = 0; num_steps < time_steps; ++ num_steps) {
         x.at(num_steps) = num_steps ; 
     }
 
-    // CanonicalSystem cs1(x0, alpha_x*0.1, dt, pattern, tau*0.5, time_steps);
-    // cs1.select_pattern();
-    // time_steps = cs1.get_time_steps();
+    // canonical_system cs1(x0, alpha_x*0.1, dt, pattern, tau*0.5, time_steps);
+    // cs1.selectPattern();
+    // time_steps = cs1.getTimeSteps();
 
     // std::vector<double> x1(time_steps), y1(time_steps) ; 
     // y1 = cs1.run();

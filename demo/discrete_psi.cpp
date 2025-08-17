@@ -3,7 +3,7 @@
 #include <string>
 #include <cmath>
 
-#include "Original_discrete/original_discrete.hpp"
+#include "original_discrete/original_discrete.hpp"
 #include "matplotlibcpp.h"
 
 namespace plt = matplotlibcpp;
@@ -38,15 +38,15 @@ int main()
     //   matrix_m1, matrix_m2, matrix_inequality_constrain,
     //   matrix_inequality_boundary, matrix_equality_constrain,
     //   matrix_equality_boundary));
-    original_discrete dis( x0, alpha_x, 0, dt, pattern, tau,
+    OriginalDiscrete dis( x0, alpha_x, 0, dt, pattern, tau,
                            num_gbfs, y_demo, goal,{});
 
-    if (!dis.select_pattern())
+    if (!dis.selectPattern())
     {
         return 0 ;
     }
 
-    int time_steps = dis.get_time_steps();
+    int time_steps = dis.getTimeSteps();
     // std::cout << "error " << std::endl ;
     std::vector<double> x(time_steps) ; 
     // std::vector<double> y2(time_steps) ; 
@@ -62,7 +62,7 @@ int main()
     {
         plt::plot(x,y[k]);
     }
-    // y2 = dis.generate_CS_track();
+    // y2 = dis.generateCanonicalSystemTrack();
     // plt::plot(x,y2);
     plt::xlabel("x");
     plt::ylabel("y");

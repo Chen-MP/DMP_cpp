@@ -3,8 +3,8 @@
 #include <string>
 #include <chrono>
 
-#include "Original_discrete/original_discrete.hpp"
-// #include "CanonicalSystem.hpp"
+#include "original_discrete/original_discrete.hpp"
+// #include "canonical_system.hpp"
 #include "matplotlibcpp.h"
 
 namespace plt = matplotlibcpp;
@@ -18,7 +18,7 @@ int main()
     // Py_SetPythonHome(L"/usr");
     // Py_SetPythonHome(pythonHome.c_str());
 
-    double x0 = 1 ;  // Canonical_System 的初始值，最终收敛到 0
+    double x0 = 1 ;  // CanonicalSystem 的初始值，最终收敛到 0
     int alpha_y = 25 ; 
     double alpha_x =  1 ;
     float dt = 0.01f ;
@@ -53,15 +53,15 @@ int main()
     //   matrix_m1, matrix_m2, matrix_inequality_constrain,
     //   matrix_inequality_boundary, matrix_equality_constrain,
     //   matrix_equality_boundary));
-    original_discrete dis( x0, alpha_x, alpha_y , dt, pattern, tau,
+    OriginalDiscrete dis( x0, alpha_x, alpha_y , dt, pattern, tau,
                            num_gbfs, y_demo, goal, obstacle);
 
-    if (!dis.select_pattern())
+    if (!dis.selectPattern())
     {
         return 0 ;
     }
 
-    int time_steps = dis.get_time_steps();
+    int time_steps = dis.getTimeSteps();
     // std::cout << "error " << std::endl ;
     std::vector<double> x(time_steps) ; 
     std::vector<double> y_dmp(time_steps) ; 
@@ -76,7 +76,7 @@ int main()
     // ddot_y = dis.generate_derivation(dot_y);
 
     std::vector<double> y2(time_steps) ; 
-    y2 = dis.generate_CS_track();
+    y2 = dis.generateCanonicalSystemTrack();
 
     auto end = std::chrono::steady_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
