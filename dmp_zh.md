@@ -193,7 +193,7 @@ $$
 4. **解出非线性项**
 
 $$
-\boxed{ \; f \;=\; \tau^2 \ddot y \;-\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big)\, }.
+\boxed{  f \;=\; \tau^2 \ddot y \;-\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big)\, }.
 $$
 
 5. **用演示数据得到 $f_d(t)$**
@@ -201,7 +201,7 @@ $$
 在**学习阶段**，把 $y, \dot y, \ddot y$ 替换为演示轨迹的 $y_d, \dot y_d, \ddot y_d$：
 
 $$
-\boxed{\,f_d(t) \;=\; \tau^2 \ddot y_d(t) \;-\; \alpha_y\big(\beta_y (g - y_d(t)) - \tau \dot y_d(t)\big)\, }.
+\boxed{ f_d(t) \;=\; \tau^2 \ddot y_d(t) \;-\; \alpha_y\big(\beta_y (g - y_d(t)) - \tau \dot y_d(t)\big)\, }.
 $$
 
 这就是代码里
