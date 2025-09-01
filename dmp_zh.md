@@ -23,7 +23,7 @@ $$
    - 设想我们需要一个单调递减的变量 $x(t)$，可以选用指数形式：
      
      $$
-        x(t) = e^{-\frac{\alpha_x}{\tau} t},
+     x(t) = e^{-\frac{\alpha_x}{\tau} t},
         \quad x(0)=1, \; 
         \lim_{t \to \infty} x(t)=0
      $$
