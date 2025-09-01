@@ -52,9 +52,10 @@ $$
     - 关于规范函数的原理基本实现可以查看 class CanonicalSystem
     - 需要说明的是，在本项目代码实际编写中，修改了论文式子(2.2)，将其修改成
         
-     $$
+$$
    \dot{x}(t) = -\tau \alpha_x x(t)
    $$  
+   
    - 上式在函数 CanonicalSystem::generateCanonicalSystemDiscreteTrack() 中实现。$\tau$ 越大，时间长度越短。
    - 如果需要查看生成的规范函数图，可以 
         ```bash
@@ -105,9 +106,11 @@ $$
 - **中心 $c_i$**  
 规范函数并非是线性函数，而是非线性函数，如果直接在 x-space $x \in [0,1]$ 上均匀分布高斯中心 $c_i$，会使得输出的高斯函数图 在初始阶段快速扫过 中心点，后期中心点又会变得稀疏，相当于把 Canonical System 展开铺平看。
 因此先选择 t-space 时间上的均匀分布，再映射到 相位变量 $x $，也就是
-  $$
+
+$$
   c_i = x(t = \frac{i-1}{N-1}) = e^{ \Big( - \tau \alpha_x \frac{i-1}{N-1}\Big)}
   $$
+  
 其中 N 是指 基函数的个数。
 
 #### 高斯函数中心点小结
@@ -121,7 +124,8 @@ $$
 
 4. **宽度 $h_i$**  
   按照 blog[2] 将宽度设置为 
-  $$
+ 
+$$
   h_i = \frac{\frac{N^{1.5}}{c_i}} { \alpha_x}
   $$
 
@@ -134,12 +138,14 @@ $$
 
 1. **从 DMP 的动力学出发**
 常见的一维 DMP 形式（向量情形分量独立同理），在论文[1] 式子(2.1)：
+
 $$
 \begin{aligned}
 \tau \dot y &= z, \\
 \tau \dot z &= \alpha_y\big(\beta_y (g - y) - z\big) + f(x).
 \end{aligned}
 $$
+
 **含义**
 - **$y(t)$**：系统的**位置**（position），也是要模仿/生成的轨迹量  
   - 例：末端位姿的某个坐标、关节角度等。
@@ -149,32 +155,40 @@ $$
 
 **Question:** 为什么要引入 $z$
 - 将原本的二阶系统
-  $$
+
+$$
   \tau^2 \ddot y \;=\; \alpha_y\big(\beta_y(g-y)-\tau\dot y\big) + f(x)
   $$
+  
   拆成两个一阶方程，便于数值积分与稳定性分析。
 - 在此框架下，$f(x)$ 作为**非线性 forcing term**，为轨迹提供形状灵活性；$\alpha_y,\beta_y$ 提供类似弹簧-阻尼的稳定收敛特性。
 
 2. **合并为关于 $y$ 的二阶方程**
 由第一式 $z = \tau \dot y$，对时间再求导：
+
 $$
 \dot z = \tau \ddot y.
 $$
+
 将它代入第二式（并把 $f$ 写成 $f(x)$ 简记为 $f$）：
+
 $$
 \tau(\tau \ddot y) \;=\; \alpha_y\big(\beta_y (g - y) - z\big) + f.
 $$
+
 用 $z=\tau \dot y$ 代回：
+
 $$
 \tau^2 \ddot y \;=\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big) + f.
 $$
 
-3. **解出非线性项 $f$**
+4. **解出非线性项 $f
+
 $$
 \boxed{\,f \;=\; \tau^2 \ddot y \;-\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big)\, }.
 $$
 
-4. **用演示数据得到 $f_d(t)$**
+5. **用演示数据得到 $f_d(t)$**
 参考论文[1]式子(2.11),(2.12):
 在**学习阶段**，把 $y, \dot y, \ddot y$ 替换为演示轨迹的 $y_d, \dot y_d, \ddot y_d$：
 $$
