@@ -24,7 +24,7 @@ $$
 
 $$
      x(t) = e^{-\frac{\alpha_x}{\tau} t},
-        \quad x(0)=1, \; 
+        \quad x(0)=1, \quad 
         \lim_{t \to \infty} x(t)=0
      $$
      
@@ -32,10 +32,10 @@ $$
 
 3. **对应的微分方程**  
    - 对 $x(t)$ 求导：  
-     $$ \dot{x}(t) = -\frac{\alpha_x}{\tau} x(t) $$
+$$ \dot{x}(t) = -\frac{\alpha_x}{\tau} x(t) $$
    - 两边乘以 $\tau$：
    
-     $$
+$$
      \tau \dot{x}(t) = -\alpha_x x(t)
      $$
      
