@@ -193,7 +193,7 @@ $$
 4. **解出非线性项**
 
 $$
-\boxed{\; f \;=\; \tau^2 \ddot y \;-\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big)\, }.
+\boxed{ \; f \;=\; \tau^2 \ddot y \;-\; \alpha_y\big(\beta_y (g - y) - \tau \dot y\big)\, }.
 $$
 
 5. **用演示数据得到 $f_d(t)$**
