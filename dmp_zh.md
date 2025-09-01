@@ -28,7 +28,7 @@ $$
      x(t) = e^{-\frac{\alpha_x}{\tau} t},
         \quad x(0)=1, \quad 
         \lim_{t \to \infty} x(t)=0
-     $$
+$$
      
    - 这种函数天然满足“随时间衰减”的需求。
 
