@@ -191,18 +191,23 @@ $$
 5. **用演示数据得到 $f_d(t)$**
 参考论文[1]式子(2.11),(2.12):
 在**学习阶段**，把 $y, \dot y, \ddot y$ 替换为演示轨迹的 $y_d, \dot y_d, \ddot y_d$：
+
 $$
 \boxed{\,f_d(t) \;=\; \tau^2 \ddot y_d(t) \;-\; \alpha_y\big(\beta_y (g - y_d(t)) - \tau \dot y_d(t)\big)\, }.
 $$
 
 这就是代码里
+
 $$
 \texttt{f\_target[g] = }\tau^2 \ddot y_d[g] - \alpha_y\big(\beta_y (g - y_d[g]) - \tau \dot y_d[g]\big)
 $$
+
 的来源。随后用高斯基函数拟合 $f_d(t)$ 得到权重 $w_i$，在**再现阶段**用
+
 $$
 f(x) \approx \frac{\sum_i \psi_i(x) w_i}{\sum_i \psi_i(x)} \, x (g - y_0)
 $$
+
 驱动系统，从而产生与演示相似且可迁移（改 $g,\tau$ 仍稳定）的轨迹。
 
 ---
@@ -256,16 +261,19 @@ $$
 
 在离散 DMP 中，加速度、速度和位置的更新公式为：
 **加速度更新**：
+
 $$
 \ddot{y}[t] = \alpha_y \big(\beta_y (g - y[t-1]) - \dot{y}[t-1] \big) + f(t)
 $$
 
 **速度更新**：
+
 $$
 \dot{y}[t] = \dot{y}[t-1] + \tau \, \ddot{y}[t] \, \Delta t
 $$
 
 **位置更新**：
+
 $$
 y[t] = y[t-1] + \tau \, \dot{y}[t] \, \Delta t
 $$
@@ -281,17 +289,21 @@ $$
 此外 $\ddot{y}[t]$ 可以分为两部分：
 
 1. **线性二阶系统部分（收敛终点）**  
+
 $$
 \alpha_y \big(\beta_y (g - y[t-1]) - \dot{y}[t-1] \big)
 $$  
+
 - 类似阻尼弹簧系统  
 - 作用：让轨迹自然收敛到目标点 $g$  
 - 如果没有 $f(t)$，轨迹将平滑单调地收敛
 
 2. **非线性 forcing term（轨迹再现）**  
+
 $$
 f(t)
 $$  
+
 - 修正轨迹，使其贴合示教轨迹的非线性形状  
 - 保证生成轨迹不仅收敛，还能重现复杂动作
 
